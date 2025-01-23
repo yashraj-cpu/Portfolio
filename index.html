@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yash Raj</title>
+  <link rel="icon" href="Images/ico3.ico" type="image/x-icon">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="styles/test_styles.css">
+  <link rel="stylesheet" href="styles/custom-button.css">
+  <!-- Optional: only one Bootstrap version should be included -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="bg-dark text-white">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">#YashRaj Damgude</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#about">About Me</a></li>
+                <li><a class="dropdown-item" href="cv.html">Curriculum Vitae</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#blog">Blog</a>
+            </li>            
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <a class="nav-link" href="https://github.com/yash-raj202134" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section id="home"
+    class="section full-page text-center bg-light d-flex flex-column justify-content-center align-items-center">
+    <div class="container">
+      <h2 class="mb-4" style="font-size: 2.5em;">
+        <span class="animate-text">Welcome to My Space...</span>
+        <span class="animate-text">I'm</span>
+        <span class="animate-text highlight">Yashraj </span>
+      </h2>
+
+      <p class="lead mb-4" style="font-size: 1.5em;">
+        <span class="animate-text">a forward-thinking Electronic & Comms Engineer interested in</span>
+        <span class="animate-text highlight">Coding</span>
+        <span class="animate-text">and</span>
+        <span class="animate-text highlight">AI</span>
+        <span class="animate-text"> committed to tackling intricate real-world challenges.</span>
+      </p>
+      <img src="images/Profile2.jpg" alt="Yashraj" class="img-fluid rounded-circle profile-img animate-image"
+        width="180">
+
+      <!-- Contact Me Button -->
+      <div class="mt-4">
+        <a href="#contact" class="btn btn-primary custom-btn btn-lg">Contact Me <i class="fa fa-paper-plane"
+            style="margin-right: 7px;"></i></a>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- About me placeholder -->
+  <div id="aboutme-placeholder"></div>
+
+  <!-- skills placeholder -->
+  <div id="skills-placeholder"></div>
+
+
+  <section id="projects" class="section full-page bg-light d-flex flex-column justify-content-center">
+    <div class="container">
+      <h1 class="text-center mb-5">Projects</h1>
+      <div class="bold-line"></div>
+      <br>
+
+      <p class="text-center mb-5 light-text">Most Recent Works</p>
+
+      <div class="row" id="project-grid">
+
+        <!-- sample display  -->
+
+        <!-- Sign language detection using machine learning -->
+        <div class="col-md-4 mb-4 project-item" data-category="data-analysis">
+          <div class="card">
+                <img src="Images/project-images/HRrec.jpg" class="card-img-top"
+                alt="Sign language detection using machine learning">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">Sign language detection using machine learning</h5>
+              <p class="card-text">
+                Leveraging Python libraries,algorithms and CNN to Detect the hand gesture and give an voice command with subtitle at the user end.
+                .
+              </p>
+
+              <a href="  "
+                class="btn btn-primary custom-btn" target="_blank"><i class="fab fa-github"
+                  style="margin-right: 8px;"></i>Source</a>
+              <a href="  "
+                class="btn btn-secondary custom-btn" target="_blank">
+                Details
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+
+       
+
+        <!-- Smart mining helmet -->
+        <div class="col-md-4 mb-4 project-item" data-category="IOT">
+          <div class="Helmet">
+            <a href="  ">
+              <img src="images/project-images/geolifeclef.jpg" class="card-img-top"
+                alt="GeoLifeCLEF-LifeCLEF-CVPR-FGVC">
+            </a>
+
+            <div class="card-body">
+              <h5 class="card-title">Smart Mining Helmet</h5>
+              <p class="card-text">
+                The Species Composition Prediction project aims to predit the harmful gases nearby or an emergengy signal an faint miner or sudden rise in temperature this will reduce the death rate of miner
+              </p>
+              <a href=  "
+                class="btn btn-primary custom-btn" target="_blank"><i class="fab fa-github"
+                  style="margin-right: 8px;"></i>Source</a>
+              <a href="  "
+                class="btn btn-secondary custom-btn" target="_blank">
+                Details
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <a href="/projects.html" class="btn btn-outline-primary">Explore Projects <i class="fa fa-arrow-right"
+              aria-hidden="true"></i></a>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="blog" class="section full-page">
+    <div class="container">
+      <h1 class="text-center mb-5">Blogs</h1>
+      <div class="bold-line"></div>
+      <br>
+      <p class="text-center mb-5 light-text">Most Liked Recent Blogs</p>
+      <div class="row">
+
+
+        <div class="col-md-6 mb-4">
+          <div class="card">
+            <a href="blog/The_Art_and_Science_of_Mulimodal_AI.html">
+              <img src="Images/blog-images/blog8/title2.webp" class="card-img-top" alt="Blog post 8">
+            </a>
+
+            <div class="card-body">
+              <h5 class="card-title">The Art and Science of Multimodal AI</h5>
+              <p class="card-text">Multimodal AI represents the next frontier in artificial intelligence, combining
+                multiple data types such as text, images, audio, and video into a cohesive framework that enhances
+                machine learning models. By leveraging these diverse inputs, multimodal systems enable machines to better
+                understand and interpret complex real-world scenarios, much like humans do</p>
+              <p class="text-muted">Posted on Dec 29, 2024</p>
+              <a href="blog/The_Art_and_Science_of_Mulimodal_AI.html" class="btn btn-primary custom-btn">Read
+                More</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 mb-4">
+          <div class="card">
+            <a href="blog/Identifying_the_critical_flaw_in_todays_LLMs.html">
+              <img src="Images/blog-images/blog7/LLM1.avif" class="card-img-top" alt="Blog post 7">
+            </a>
+
+            <div class="card-body">
+              <h5 class="card-title">Beyond the Hype: Identifying the Critical
+                Flaw in Today's LLMs</h5>
+              <p class="card-text">Despite their impressive capabilities, large language models (LLMs) have a critical
+                flaw that is often overlooked. These limitations could pose challenges to their long-term reliability
+                and
+                practical use in real-world applications</p>
+              <p class="text-muted">Posted on Oct 27, 2024</p>
+              <a href="blog/Identifying_the_critical_flaw_in_todays_LLMs.html" class="btn btn-primary custom-btn">Read
+                More</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 mb-4">
+          <div class="card">
+            <a href="blog/AI_Driven_Combat.html">
+              <img src="images/blog-images/blog6/India-military-with-national-flag.jpg" class="card-img-top"
+                alt="Blog post 6">
+            </a>
+
+            <div class="card-body">
+              <h5 class="card-title">AI-Driven Combat: Redefining India's
+                Military Strategy for the Future</h5>
+              <p class="card-text">The incorporation of artificial intelligence (AI) into contemporary warfare marks a
+                groundbreaking change in military strategy and operations. As global powers harness AI's potential, the
+                Indian Armed Forces are proactively seeking innovative methods to boost their combat readiness and
+                operational effectiveness.</p>
+              <p class="text-muted">Posted on Sep 24, 2024</p>
+              <a href="blog/AI_Driven_Combat.html" class="btn btn-primary custom-btn">Read
+                More</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 mb-4">
+          <div class="card">
+            <a href="blog/Understanding_Neural_Processing_Units_(NPU).html">
+              <img src="images/blog-images/blog5/NPU3.avif" class="card-img-top" alt="Blog post 5">
+            </a>
+
+            <div class="card-body">
+              <h5 class="card-title">Understanding Neural Processing Units (NPU): The Future of AI Accelerators</h5>
+              <p class="card-text">Neural Processing Units (NPUs), cutting-edge processors designed to optimize
+                artificial
+                intelligence and machine learning tasks. It examines how NPUs enhance performance, energy efficiency,
+                and
+                scalability across various applications, from mobile devices and automotive systems to healthcare and
+                edge
+                computing.</p>
+              <p class="text-muted">Posted on Aug 27, 2024</p>
+              <a href="blog/Understanding_Neural_Processing_Units_(NPU).html" class="btn btn-primary custom-btn">Read
+                More</a>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="text-center mt-4">
+          <a href="/blog-listing.html" class="btn btn-light">View All Posts <i class="fa fa-arrow-right"
+              aria-hidden="true"></i></a>
+        </div>
+      </div>
+  </section>
+
+  <!-- Papers Section -->
+  <section id="papers" class="section full-page">
+    <div class="container">
+      <h1 class="text-center mb-4">Research Papers</h1>
+      <div class="bold-line"></div>
+      <br>
+      <p class="text-center mb-5 light-text">Some of My Favourite Research Paper</p>
+      <div class="row">
+        <!-- Paper 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h6 class="card-title">Species Composition Prediction with High Spatial Resolution at Continental Scale
+                Using Remote Sensing</h6>
+              <p class="card-text">"The "Location-based Species Presence Prediction" project aims to enhance species
+                composition prediction using deep learning models and remote sensing data."</p>
+              <a href="/files/paper1.pdf" class="btn btn-primary custom-btn" target="_blank"><i class="fa fa-file"
+                  aria-hidden="true"></i> View Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paper 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h6 class="card-title">Sleep State Detection Using LSTM</h6>
+              <p class="card-text"> "Paper focuses
+                on developing models to accurately detect sleep onset and wake phases from wrist
+                worn accelerometer data, this competition addresses the limitations of traditional
+                sleep monitoring methods."</p>
+              <a href="/files/paper2.pdf" class="btn btn-primary custom-btn" target="_blank"><i class="fa fa-file"
+                  aria-hidden="true"></i> View Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paper 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h6 class="card-title">Number Representation in Computer Systems </h6>
+              <p class="card-text"> "The paper explores techniques for representing numbers in computer system
+                architecture,
+                including decimal, binary, octal, and hexadecimal systems."</p>
+              <a href="/files/paper3.pdf" class="btn btn-primary custom-btn" target="_blank"><i class="fa fa-file"
+                  aria-hidden="true"></i> View Paper</a>
+            </div>
+          </div>
+        </div>
+        <!-- Paper 4 -->
+
+
+        <!-- more papers here -->
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="contact" class="section full-page bg-light">
+    <div class="container">
+      <h1 class="text-center mb-5">Contact Me</h1>
+      <div class="bold-line"></div>
+      <br>
+      <p class="text-center mb-5 light-text">Get in touch</p>
+
+
+
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <h3><i class="fa fa-users" aria-hidden="true"></i> Get in Touch</h3>
+          <p>Feel free to reach out to me for any inquiries or opportunities.</p>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-envelope"></i> Email: ydamgude@gmail.com</li>
+            <li><i class="fas fa-phone"></i> WhatsApp: +91 7977680143</li>
+            <li><i class="fas fa-map-marker-alt"></i> Address: 316,B-3,Prabhakar nagar,A.G. Pawar lane,Byculla,Mumbai </li>
+          </ul>
+        </div>
+
+
+
+        <!-- Contact Form Section -->
+        <div class="col-md-6 p-4"
+          style="background-color: #f9f9f9; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); max-width: 600px; margin: auto;">
+          <h4 class="text-center mb-4" style="color: #343a40;">Connect Me!</h4>
+
+          <!-- Contact Form -->
+          <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Access Key -->
+            <input type="hidden" name="access_key" value="4ccdb722-03b1-494b-99ff-388a411d1fe0">
+
+            <!-- Name Field -->
+            <div class="form-group mb-4">
+              <label for="name" style="font-weight: bold; color: #495057;">Your Name</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"
+                    style="background-color: #007bff; color: #fff; border-radius: 10px 0 0 10px;"><i
+                      class="fas fa-user"></i></span>
+                </div>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required
+                  style="border-radius: 0 10px 10px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+              </div>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group mb-4">
+              <label for="email" style="font-weight: bold; color: #495057;">Your Email</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"
+                    style="background-color: #007bff; color: #fff; border-radius: 10px 0 0 10px;"><i
+                      class="fas fa-envelope"></i></span>
+                </div>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required
+                  style="border-radius: 0 10px 10px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+              </div>
+            </div>
+
+            <!-- Message Field -->
+            <div class="form-group mb-4">
+              <label for="message" style="font-weight: bold; color: #495057;">Message</label>
+              <div class="input-group">
+                <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your message here..."
+                  required style="border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"></textarea>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary btn-block"
+              style="border-radius: 10px; box-shadow: 0 4px 10px rgba(0,123,255,0.3); transition: 0.3s; font-weight: bold;"
+              onmouseover="this.style.boxShadow='0 6px 12px rgba(0,123,255,0.5)'"
+              onmouseout="this.style.boxShadow='0 4px 10px rgba(0,123,255,0.3)'">
+              Send Message <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+
+
+        <!-- Custom Modal Popup -->
+        <div id="alertModal" class="custom-modal">
+          <div class="custom-modal-content">
+            <span class="custom-close">&times;</span>
+            <p id="alertMessage"></p>
+            <button id="closeButton" class="btn">Close</button>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+  <a>
+    <img src="https://visitcount.itsvg.in/api?id=yash&label=Visitors&color=12&icon=0&pretty=true" />
+  </a>
+
+  <footer class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row">
+        <!-- About Section -->
+        <div class="col-md-4">
+          <h5>About</h5>
+          <p>
+            I'm YashRaj, a electronic and telecommunication Engineer specializing in Machine Learning,Data Science and IOT.
+ Passionate about developing innovative solutions and continuously learning new technologies.
+            This is all about myself and thank you so much for visting my website...
+          </p>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="col-md-4">
+          <h5>Contact Information</h5>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-phone"></i> +91 7977680143</li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:ydamgude@gmail.com"
+                class="text-white">ydamgude@gmail.com</a></li>
+            <li><i class="fas fa-map-marker-alt"></i> Mumbai, India</li>
+          </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-2">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#about" class="text-white">About Me</a></li>
+            <li><a href="cv.html" class="text-white">Curriculum Vitae</a></li>
+            <li><a href="#projects" class="text-white">Projects</a></li>
+            <li><a href="#blog" class="text-white">Blog</a></li>
+            <li><a href="#papers" class="text-white">Papers</a></li>
+            <li><a href="#contact" class="text-white">Contact</a></li>
+            <li><a href="https://visitcount.itsvg.in/analytics/yash">Analytics</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Links and Subscription -->
+        <div class="col-md-2">
+          <h5>Follow Me</h5>
+          <div class="footer-social-links">
+            <a href="https://www.instagram.com/raj_yash_00/?hl=en" target="_blank" title="Instagram"
+              class="text-white me-2"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100007895925153" target="_blank" title="Facebook"
+              class="text-white me-2"><i class="fab fa-facebook"></i></a>
+            <a href="https://x.com/YashRaj07880847" target="_blank" title="X" class="text-white me-2"><i
+                class="fab fa-twitter"></i></a>
+            <a href="https://github.com/yash-raj202134" target="_blank" title="GitHub" class="text-white me-2"><i
+                class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/yash-raj-8b924a296/" target="_blank" title="LinkedIn"
+              class="text-white me-2"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.kaggle.com/yashraj121" target="_blank" title="Kaggle" class="text-white me-2"><i
+                class="fab fa-kaggle"></i></a>
+            <a href="https://leetcode.com/u/yash_raj121/" target="_blank" title="LeetCode" class="text-white me-2"><i
+                class="fas fa-code"></i></a>
+          </div>
+
+          <!-- Subscription Form -->
+          <form name="submit-to-google-sheet" class="mt-3">
+            <div class="mb-2">
+              <input type="email" name="email" class="form-control" placeholder="Subscribe to newsletter" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-sm w-100">Subscribe</button>
+          </form>
+          <span class="subscription" id="msg"></span>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="row mt-4">
+        <div class="col-md-12 text-center">
+          <p>&copy; 2025 Yash Raj. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- jQuery and Bootstrap JS -->
+  <script>
+    // JavaScript to load skills html file 
+    document.addEventListener("DOMContentLoaded", function () {
+      fetch("misc/skills.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("skills-placeholder").innerHTML = data;
+        });
+    });
+
+    // JavaScript to load aboutme html file 
+    document.addEventListener("DOMContentLoaded", function () {
+      fetch("misc/aboutme.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("aboutme-placeholder").innerHTML = data;
+        });
+    });
+
+
+  </script>
+  <script src="scripts/scripts.js"></script>
+  <script src="scripts/background-changer.js"></script>
+  <script src="scripts/project-filter.js"></script>
+  <script src="scripts/contact-form.js"></script>
+  <script src="scripts/newsletter-subscription.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

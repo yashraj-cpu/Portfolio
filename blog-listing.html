@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yash Raj - Blog</title>
+  <link rel="icon" href="Images/ico3.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/test_styles.css">
+  <link rel="stylesheet" href="styles/blog-styles.css">
+  <link rel="stylesheet" href="../styles/custom-button.css">
+  <style>
+    .blog-post.card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: white;
+    }
+
+    .blog-post.card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .blog-post .card-body {
+      padding: 20px;
+    }
+
+    .blog-post .card-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .blog-post .card-title a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .blog-post .card-title a:hover {
+      color: #007bff;
+    }
+
+    .blog-post .card-text {
+      color: #666;
+      text-align: left;
+      margin-bottom: 15px;
+    }
+
+    .blog-post .btn-primary {
+      background-color: #007bff;
+      border: none;
+      padding: 8px 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .blog-post .btn-primary:hover {
+      background-color: #0056b3;
+    }
+
+    .btn-secondary {
+      background-color: #4CAF50;
+      /* Change background color */
+      color: white;
+      /* Text color */
+      padding: 12px 24px;
+      /* Padding for better spacing */
+      font-size: 16px;
+      /* Increase font size */
+      border-radius: 8px;
+      /* Rounded corners */
+      border: none;
+      /* Remove border */
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      /* Smooth transition effects */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      /* Subtle shadow */
+    }
+
+    .btn-secondary:hover {
+      background-color: #45a049;
+      /* Darken on hover */
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      /* Increase shadow on hover */
+    }
+
+    .btn-secondary:active {
+      background-color: #388e3c;
+      /* Further darken when active */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      /* Slight shadow when clicked */
+      transform: translateY(2px);
+      /* Slight movement on click */
+    }
+
+    .btn-secondary:focus {
+      outline: none;
+      /* Remove focus outline */
+      box-shadow: 0 0 10px rgba(76, 175, 80, 0.8);
+      /* Highlight on focus */
+    }
+
+    .social-share .btn {
+      font-size: 18px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      padding: 8px;
+      margin-right: 10px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      color: white;
+      /* Make icons visible */
+    }
+
+    .social-share .btn:hover {
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      transform: translateY(-3px);
+    }
+
+    .social-share .btn:active {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transform: translateY(2px);
+    }
+
+    .btn-outline-success {
+      border-color: #25D366;
+      background-color: #25D366;
+      /* Add background color */
+      color: white;
+    }
+
+    .btn-outline-success:hover {
+      background-color: #1EB94E;
+      /* Darken on hover */
+      color: white;
+    }
+
+    .btn-outline-primary {
+      border-color: #1877F2;
+      background-color: #1877F2;
+      color: white;
+    }
+
+    .btn-outline-primary:hover {
+      background-color: #155BC1;
+      color: white;
+    }
+
+    .btn-outline-info {
+      border-color: #1DA1F2;
+      background-color: #1DA1F2;
+      color: white;
+    }
+
+    .btn-outline-info:hover {
+      background-color: #0D8CF0;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="index.html">#Yash Raj</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#home">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              About
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="index.html#about">About Me</a></li>
+              <li><a class="dropdown-item" href="cv.html">Curriculum Vitae</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projects.html">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#blog">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#papers">Papers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact">Contact</a>
+          </li>
+          <a class="nav-link" href="https://github.com/yash-raj202134" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container mt-5">
+    <h1 class="text-center mb-5">Blog Posts</h1>
+    <div class="bold-line"></div>
+    <br>
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+
+
+        <div class="card blog-post mb-5">
+          <div class="card-body">
+            <h2 class="card-title"><a href="blog/The_Art_and_Science_of_Mulimodal_AI.html">The Art and Science of Multimodal AI</a>
+            </h2>
+            <p class="text-muted">Posted on Dec 29, 2024</p>
+            <p class="card-text">Multimodal AI represents the next frontier in artificial intelligence, combining
+              multiple data types—such as text, images, audio, and video—into a cohesive framework that enhances machine
+              learning models. By leveraging these diverse inputs, multimodal systems enable machines to better
+              understand and interpret complex real-world scenarios, much like humans do.....</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="blog/The_Art_and_Science_of_Mulimodal_AI.html" class="btn btn-secondary custom-btn">Read More</a>
+              <div class="social-share">
+                <button class="btn btn-sm btn-outline-success"
+                  onclick="shareOnWhatsApp('The Art and Science of Multimodal AI', 'blog/The_Art_and_Science_of_Mulimodal_AI.html')"><i
+                    class="fab fa-whatsapp"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnFacebook('The Art and Science of Multimodal AI', 'blog/The_Art_and_Science_of_Mulimodal_AI.html')"><i
+                    class="fab fa-facebook-f"></i></button>
+                <button class="btn btn-sm btn-outline-info"
+                  onclick="shareOnTwitter('The Art and Science of Multimodal AI', 'blog/The_Art_and_Science_of_Mulimodal_AI.html')"><i
+                    class="fab fa-twitter"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnLinkedIn('The Art and Science of Multimodal AI', 'blog/The_Art_and_Science_of_Mulimodal_AI.html')"><i
+                    class="fab fa-linkedin-in"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="card blog-post mb-5">
+          <div class="card-body">
+            <h2 class="card-title"><a href="blog/Identifying_the_critical_flaw_in_todays_LLMs.html">Beyond the Hype:
+                Identifying the Critical
+                Flaw in Today's LLMs</a></h2>
+            <p class="text-muted">Posted on Oct 27, 2024</p>
+            <p class="card-text">Despite their impressive capabilities, large language models (LLMs) have a critical
+              flaw that is often overlooked. These limitations could pose challenges to their long-term reliability and
+              practical use in real-world applications....</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="blog/Identifying_the_critical_flaw_in_todays_LLMs.html" class="btn btn-secondary custom-btn">Read
+                More</a>
+              <div class="social-share">
+                <button class="btn btn-sm btn-outline-success"
+                  onclick="shareOnWhatsApp('Beyond the Hype: Identifying the Critical Flaw in Todays LLMs', 'blog/Identifying_the_critical_flaw_in_todays_LLMs.html')"><i
+                    class="fab fa-whatsapp"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnFacebook('Beyond the Hype: Identifying the Critical Flaw in Todays LLMs', 'blog/Identifying_the_critical_flaw_in_todays_LLMs.html')"><i
+                    class="fab fa-facebook-f"></i></button>
+                <button class="btn btn-sm btn-outline-info"
+                  onclick="shareOnTwitter('Beyond the Hype: Identifying the Critical Flaw in Todays LLMs', 'blog/Identifying_the_critical_flaw_in_todays_LLMs.html')"><i
+                    class="fab fa-twitter"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnLinkedIn('Beyond the Hype: Identifying the Critical Flaw in Todays LLMs', 'blog/Identifying_the_critical_flaw_in_todays_LLMs.html')"><i
+                    class="fab fa-linkedin-in"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card blog-post mb-5">
+          <div class="card-body">
+            <h2 class="card-title"><a href="blog/AI_Driven_Combat.html">AI-Driven Combat: Redefining India's
+                Military Strategy for the Future</a></h2>
+            <p class="text-muted">Posted on Sep 24, 2024</p>
+            <p class="card-text">The incorporation of artificial intelligence (AI) into contemporary warfare marks a
+              groundbreaking change in military strategy and operations. As global powers harness AI's potential, the
+              Indian Armed Forces are proactively seeking innovative methods to boost their combat readiness and
+              operational effectiveness...</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="blog/AI_Driven_Combat.html" class="btn btn-secondary custom-btn">Read More</a>
+              <div class="social-share">
+                <button class="btn btn-sm btn-outline-success"
+                  onclick="shareOnWhatsApp('AI-Driven Combat: Redefining Indias Military Strategy for the Future', 'blog/AI_Driven_Combat.html')"><i
+                    class="fab fa-whatsapp"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnFacebook('AI-Driven Combat: Redefining Indias Military Strategy for the Future', 'blog/AI_Driven_Combat.html')"><i
+                    class="fab fa-facebook-f"></i></button>
+                <button class="btn btn-sm btn-outline-info"
+                  onclick="shareOnTwitter('AI-Driven Combat: Redefining Indias Military Strategy for the Future', 'blog/AI_Driven_Combat.html')"><i
+                    class="fab fa-twitter"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnLinkedIn('AI-Driven Combat: Redefining Indias Military Strategy for the Future', 'blog/AI_Driven_Combat.html')"><i
+                    class="fab fa-linkedin-in"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card blog-post mb-5">
+          <div class="card-body">
+            <h2 class="card-title"><a href="blog/Understanding_Neural_Processing_Units_(NPU).html">Understanding
+                Neural Processing Units (NPU): The Future of AI Accelerators</a></h2>
+            <p class="text-muted">Posted on Aug 27, 2024</p>
+            <p class="card-text">Neural Processing Units (NPUs), cutting-edge processors designed to optimize artificial
+              intelligence and machine learning tasks. It examines how NPUs enhance performance, energy efficiency, and
+              scalability across various applications, from mobile devices and automotive systems to healthcare and edge
+              computing. Explore the pivotal role of NPUs in advancing AI technology, their core applications, and what
+              the future holds for these innovative processors...</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="blog/Understanding_Neural_Processing_Units_(NPU).html" class="btn btn-secondary custom-btn">Read
+                More</a>
+              <div class="social-share">
+                <button class="btn btn-sm btn-outline-success"
+                  onclick="shareOnWhatsApp('Understanding Neural Processing Units (NPU): The Future of AI Accelerators', 'blog/Understanding_Neural_Processing_Units_(NPU).html')"><i
+                    class="fab fa-whatsapp"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnFacebook('Understanding Neural Processing Units (NPU): The Future of AI Accelerators', 'blog/Understanding_Neural_Processing_Units_(NPU).html')"><i
+                    class="fab fa-facebook-f"></i></button>
+                <button class="btn btn-sm btn-outline-info"
+                  onclick="shareOnTwitter('Understanding Neural Processing Units (NPU): The Future of AI Accelerators', 'blog/Understanding_Neural_Processing_Units_(NPU).html')"><i
+                    class="fab fa-twitter"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnLinkedIn('Understanding Neural Processing Units (NPU): The Future of AI Accelerators', 'blog/Understanding_Neural_Processing_Units_(NPU).html')"><i
+                    class="fab fa-linkedin-in"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="card blog-post mb-5">
+          <div class="card-body">
+            <h2 class="card-title"><a
+                href="blog/AI_in_Education_Enhancing_Teacher_Efficiency_and_Student_Engagement.html">AI in
+                Education: Enhancing Teacher Efficiency and Student Engagement</a></h2>
+            <p class="text-muted">Posted on Aug 04, 2024</p>
+            <p class="card-text">AI in education enhances teacher efficiency and student engagement through personalized
+              learning,
+              automated grading, and interactive tools, creating a dynamic and adaptable learning environment.
+              As AI advances, its role in education is set to expand, offering more innovative solutions for educational
+              challenges...</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="blog/AI_in_Education_Enhancing_Teacher_Efficiency_and_Student_Engagement.html"
+                class="btn btn-secondary custom-btn">Read More</a>
+              <div class="social-share">
+                <button class="btn btn-sm btn-outline-success"
+                  onclick="shareOnWhatsApp('AI in Education: Enhancing Teacher Efficiency and Student Engagement', 'blog/AI_in_Education_Enhancing_Teacher_Efficiency_and_Student_Engagement.html')"><i
+                    class="fab fa-whatsapp"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnFacebook('AI in Education: Enhancing Teacher Efficiency and Student Engagement', 'blog/AI_in_Education_Enhancing_Teacher_Efficiency_and_Student_Engagement.html')"><i
+                    class="fab fa-facebook-f"></i></button>
+                <button class="btn btn-sm btn-outline-info"
+                  onclick="shareOnTwitter('AI in Education: Enhancing Teacher Efficiency and Student Engagement', 'blog/AI_in_Education_Enhancing_Teacher_Efficiency_and_Student_Engagement.html')"><i
+                    class="fab fa-twitter"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnLinkedIn('AI in Education: Enhancing Teacher Efficiency and Student Engagement', 'blog/AI_in_Education_Enhancing_Teacher_Efficiency_and_Student_Engagement.html')"><i
+                    class="fab fa-linkedin-in"></i></button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card blog-post mb-5">
+          <div class="card-body">
+            <h2 class="card-title"><a href="blog/Machine_Learning_Trends_in_2024.html">Machine Learning Trends in
+                2024</a></h2>
+            <p class="text-muted">Posted on Jul 15, 2024</p>
+            <p class="card-text">A brief overview of the latest trends in machine learning and how they're shaping the
+              future of AI...</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="blog/Machine_Learning_Trends_in_2024.html" class="btn btn-secondary custom-btn">Read
+                More</a>
+              <div class="social-share">
+                <button class="btn btn-sm btn-outline-success"
+                  onclick="shareOnWhatsApp('Machine Learning Trends in 2024', 'blog/Machine_Learning_Trends_in_2024.html')"><i
+                    class="fab fa-whatsapp"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnFacebook('Machine Learning Trends in 2024', 'blog/Machine_Learning_Trends_in_2024.html')"><i
+                    class="fab fa-facebook-f"></i></button>
+                <button class="btn btn-sm btn-outline-info"
+                  onclick="shareOnTwitter('Machine Learning Trends in 2024', 'blog/Machine_Learning_Trends_in_2024.html')"><i
+                    class="fab fa-twitter"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnLinkedIn('Machine Learning Trends in 2024', 'blog/Machine_Learning_Trends_in_2024.html')"><i
+                    class="fab fa-linkedin-in"></i></button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card blog-post mb-5">
+          <div class="card-body">
+            <h2 class="card-title"><a href="blog/The_Impact_of_Data_Science_on_Modern_Business.html">The Impact of
+                Data Science on Modern Business</a></h2>
+            <p class="text-muted">Posted on Jun 30, 2024</p>
+            <p class="card-text">Exploring how data science is revolutionizing decision-making processes in various
+              industries...</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="blog/The_Impact_of_Data_Science_on_Modern_Business.html"
+                class="btn btn-secondary custom-btn">Read
+                More</a>
+              <div class="social-share">
+                <button class="btn btn-sm btn-outline-success"
+                  onclick="shareOnWhatsApp('The Impact of Data Science on Modern Business', 'blog/The_Impact_of_Data_Science_on_Modern_Business.html')"><i
+                    class="fab fa-whatsapp"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnFacebook('The Impact of Data Science on Modern Business', 'blog/The_Impact_of_Data_Science_on_Modern_Business.html')"><i
+                    class="fab fa-facebook-f"></i></button>
+                <button class="btn btn-sm btn-outline-info"
+                  onclick="shareOnTwitter('The Impact of Data Science on Modern Business', 'blog/The_Impact_of_Data_Science_on_Modern_Business.html')"><i
+                    class="fab fa-twitter"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnLinkedIn('The Impact of Data Science on Modern Business', 'blog/The_Impact_of_Data_Science_on_Modern_Business.html')"><i
+                    class="fab fa-linkedin-in"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="card blog-post mb-5">
+          <div class="card-body">
+            <h2 class="card-title"><a
+                href="blog/How_a_Neural_Network_Mimics_the_Human_Brain_and_to_What_Extent.html">How Neural
+                Networks Mimic the Human Brain</a></h2>
+            <p class="text-muted">Posted on May 31, 2024</p>
+            <p class="card-text">Discover the fascinating ways in which neural networks emulate the structure and
+              function of the human
+              brain, and the extent to which they succeed...</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="blog/How_a_Neural_Network_Mimics_the_Human_Brain_and_to_What_Extent.html"
+                class="btn btn-secondary custom-btn">Read More</a>
+              <div class="social-share">
+                <button class="btn btn-sm btn-outline-success"
+                  onclick="shareOnWhatsApp('How Neural Networks Mimic the Human Brain', 'blog/How_a_Neural_Network_Mimics_the_Human_Brain_and_to_What_Extent.html')"><i
+                    class="fab fa-whatsapp"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnFacebook('How Neural Networks Mimic the Human Brain', 'blog/How_a_Neural_Network_Mimics_the_Human_Brain_and_to_What_Extent.html')"><i
+                    class="fab fa-facebook-f"></i></button>
+                <button class="btn btn-sm btn-outline-info"
+                  onclick="shareOnTwitter('How Neural Networks Mimic the Human Brain', 'blog/How_a_Neural_Network_Mimics_the_Human_Brain_and_to_What_Extent.html')"><i
+                    class="fab fa-twitter"></i></button>
+                <button class="btn btn-sm btn-outline-primary"
+                  onclick="shareOnLinkedIn('How Neural Networks Mimic the Human Brain', 'blog/How_a_Neural_Network_Mimics_the_Human_Brain_and_to_What_Extent.html')"><i
+                    class="fab fa-linkedin-in"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <script>
+
+    // JavaScript to load external footer
+    document.addEventListener("DOMContentLoaded", function () {
+      fetch("misc/footer.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        });
+    });
+  </script>
+
+  <!-- jQuery and Bootstrap JS -->
+  <script src="scripts/blog-share.js"></script>
+  <script src="scripts/newsletter-subscription.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

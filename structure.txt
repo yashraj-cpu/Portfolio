@@ -1,0 +1,40 @@
+This is a basic file/folders structure 
+
+portfolio-website/
+├── index.html
+├── cv.html
+├── blog-listing.html
+├── projects.html
+├── test.html
+├── styles/
+│   ├── styles.css
+│   ├── test_styles.css
+│   ├── other stylesheets...
+├── scripts/
+│   ├── scripts.js
+│   ├── form-validation.js
+│   ├── project-filter.js
+│   ├── other scripts...
+├── images/
+│   ├── blog-images
+│   ├── home-background
+│   ├── page-background
+│   ├── project-images
+│   ├── testimonial-images
+│   ├── others...
+│
+├── misc/
+│   ├── aboutme.html
+│   ├── footer.html
+│   ├── navbar.html
+|   ├── other misc files...
+|
+├── files/
+│    ├── resume.pdf
+│    ├── other files...
+|
+├── blog/
+│   ├── post1.html
+│   ├── post2.html
+│   ├── other posts...
+├── README.md
